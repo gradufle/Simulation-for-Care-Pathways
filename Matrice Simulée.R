@@ -5,34 +5,11 @@ af <- data.frame(main,c("ghm1","ghm2","finessgeo1","finessgeo2","annee_sortie1")
 af <- main %>% select(ghm1,ghm2,finessgeo1,finessgeo2,annee_sortie1)
 View(af)
 
-alltodo <- expand.grid(all1, allf)
+#The source of our problem:
+#alltodo <- expand.grid(all1, allf)
 
+#Lets simulate a random dataset of this format, with a way lower number of rows:
 set.seed(1)
-
-lambda <- 2.5 
-F.inv <- function(x) {
-  return(log(x)/lambda)
-}
-
-m1 <- matrix(round(rexp(36, rate =0.8)) , nrow = 6 , ncol = 6) 
-# print the matrix 
-print(m1)
-
-new_diag <- apply(m1, 2, max) * rnum(1,mean = 10)
-
-diag(m1) <- new_diag
-print(m1)
-
-x <- rmultinom(1, m1[5,1], rep.int(1 / 25, 25))
-print(x)
-m2 <- matrix(x,nrow = 5 , ncol = 5)
-print(m2)
-
-
-print(x)
-
-
-
 
 original_matrix <- matrix(round(rexp(36, rate = 0.7)*10), nrow = 6, ncol = 6)
 
@@ -54,7 +31,8 @@ distribute_value <- function(value, n, m) {
     j <- sample(1:m, 1)
     # Determine a random value to place, ensuring it doesn't exceed the remaining value
     assign_value <- sample(1:remaining_value, 1)
-    # Retravailler ?
+    # Retravailler ? possibilité avec rmultinom:
+    #x <- rmultinom(1, m1[5,1], rep.int(1 / 25, 25))
     new_matrix[i, j] <- new_matrix[i, j] + assign_value
     remaining_value <- remaining_value - assign_value
   }
