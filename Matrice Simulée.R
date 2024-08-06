@@ -1,3 +1,5 @@
+test2
+
 main <- read_dta("main.dta")
 
 af <- data.frame(main,c("ghm1","ghm2","finessgeo1","finessgeo2","annee_sortie1"))
