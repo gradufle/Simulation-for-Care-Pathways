@@ -10,7 +10,9 @@ View(af)
 #Lets simulate a random dataset of this format, with a way lower number of rows:
 set.seed(1)
 
-original_matrix <- matrix(round(rexp(36, rate = 0.7)*10), nrow = 6, ncol = 6)
+h1 <- 6
+h2 <- 6
+original_matrix <- matrix(round(rexp(h1*h2, rate = 0.7)*10), nrow = h2, ncol = h1)
 new_diag <- apply(original_matrix, 2, sum) * round(rexp(1, rate = 0.9)*3)
 diag(original_matrix) <- new_diag
 print(original_matrix)
