@@ -2,7 +2,7 @@ Some ideas for what we are doing:
 
 Research question(s):
 
-Are two step of care verticaly linked ?  (e.g part of a recuring care pathway)
+Are two step of care vertically linked ?  (e.g part of a recuring care pathway)
 
   How can we define a care pathway ? 
 
@@ -10,7 +10,7 @@ Are transfers vertical or horizontal ?
 
 Are exaugenous chocs detectable using probabilities of transfer ? 
 
-Our cuurent dataset at the hospital level are limited for this application as it does not capture the different axis of 
+Our cuurent dataset at the hospital level are limited for this application as it does not capture the different axis of verticality 
 
 A) Litterature
 
@@ -20,9 +20,14 @@ B) Matrix transformations
 
 C) Simulations
 
-  i) The problem of general equilibrium with a large number of matrices
+  i) Problem of general equilibrium with a large number of matrices
   ii) Probabilities of transfers for HA/HB & E/S
-  iii) Verticality of transfers, a classifier approach 
+  iii) Verticality of transfers
+
+Sequance classification, Process Mining 
+
+P(Tab) > P(Tba)
+
   iv) Change in the probability of probabilities following an exogenous choc
   v) Evaluation of the magnitude of the effect
 
